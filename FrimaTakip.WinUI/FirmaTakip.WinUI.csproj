@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4A43A4A0-BCA2-4FC8-BB73-EC3C29ED9D28}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FirmaTakip.WinUI</RootNamespace>
+    <AssemblyName>Frima Takip Otomasyonu</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Asus\Desktop\FirmaTakip\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>93653CBF5F56DE635D9858E34D16C71F6E80F559</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>FirmaTakip.WinUI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>maintenance_time.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>FirmaTakip.WinUI.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v11.2.Core, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Metro.Navigation.11.2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependency\DevExpress.Metro.Navigation.11.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.2.Core, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v11.2.Core, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.2.UI, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v11.2, Version=11.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BakimFormlari\BakimMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BakimFormlari\AnaForm.Designer.cs">
+      <DependentUpon>BakimMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BakimFormlari\Bakim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BakimFormlari\Bakim.Designer.cs">
+      <DependentUpon>Bakim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BakimFormlari\BakimRaporlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BakimFormlari\BakimRaporlari.Designer.cs">
+      <DependentUpon>BakimRaporlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BakimFormlari\Firma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BakimFormlari\Firma.Designer.cs">
+      <DependentUpon>Firma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BakimFormlari\KullaniciBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BakimFormlari\KullaniciBilgileri.Designer.cs">
+      <DependentUpon>KullaniciBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BakimFormlari\Tezgah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BakimFormlari\Tezgah.Designer.cs">
+      <DependentUpon>Tezgah.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giris.Designer.cs">
+      <DependentUpon>Giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StokFormlari\HamMalzemeSevk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokFormlari\HamMalzemeSevk.Designer.cs">
+      <DependentUpon>HamMalzemeSevk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokFormlari\IslenmisMalzemeSevk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokFormlari\IslenmisMalzemeSevk.Designer.cs">
+      <DependentUpon>IslenmisMalzemeSevk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokFormlari\Malzemeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokFormlari\Malzemeler.Designer.cs">
+      <DependentUpon>Malzemeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokFormlari\Musteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokFormlari\Musteri.Designer.cs">
+      <DependentUpon>Musteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokFormlari\MusteriyeSevk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokFormlari\MusteriyeSevk.Designer.cs">
+      <DependentUpon>MusteriyeSevk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokFormlari\RaporFormlari\HamMalzemeRaporAna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokFormlari\RaporFormlari\HamMalzemeRaporAna.Designer.cs">
+      <DependentUpon>HamMalzemeRaporAna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokFormlari\SarjEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokFormlari\SarjEkle.Designer.cs">
+      <DependentUpon>SarjEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stok\DTO\HurdaIslenmisMalzemeSevkGrid.cs" />
+    <Compile Include="Stok\DTO\IslenmisMalzemeDetaySevkAlaniGrid.cs" />
+    <Compile Include="Stok\DTO\HamMalzemeGrid.cs" />
+    <Compile Include="Stok\DTO\IslenmisMalzemeBilgi.cs" />
+    <Compile Include="Stok\DTO\IslenmisMalzemeDetayGrid.cs" />
+    <Compile Include="Stok\DTO\IslenmisMalzemeGrid.cs" />
+    <Compile Include="Stok\DTO\IslenmisMalzemeImalatGrid.cs" />
+    <Compile Include="Stok\DTO\Rapor\HamMalzemeAna.cs" />
+    <Compile Include="Stok\DTO\Rapor\IslenenMalzemeParti.cs" />
+    <Compile Include="Stok\DTO\Rapor\HamStokParti.cs" />
+    <Compile Include="Stok\DTO\Rapor\HurdaAlaniParti.cs" />
+    <Compile Include="Stok\DTO\Rapor\SevkAlaniParti.cs" />
+    <Compile Include="Stok\DTO\SarjNumaralariGrid.cs" />
+    <Compile Include="Stok\DTO\HamStokDetayImalatGrid.cs" />
+    <Compile Include="Stok\DTO\SevkAlaniIslenmisMalzemeSevkGrid.cs" />
+    <Compile Include="Stok\DTO\SevkIrsaliyeDetayMusteriyeSevk.cs" />
+    <Compile Include="Stok\DTO\SevkIrsaliyeMusteriyeSevk.cs" />
+    <Compile Include="Stok\MalzemeTabSecimi.cs" />
+    <Compile Include="Stok\Services\Birim.cs" />
+    <Compile Include="Stok\Services\HamMalzeme.cs" />
+    <Compile Include="Stok\Services\HamStok.cs" />
+    <Compile Include="Stok\Services\HamStokRapor.cs" />
+    <Compile Include="Stok\Services\Hurda.cs" />
+    <Compile Include="Stok\Services\IslenmisMalzeme.cs" />
+    <Compile Include="Stok\Services\Musteri.cs" />
+    <Compile Include="Stok\Services\Sarj.cs" />
+    <Compile Include="Stok\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="StokFormlari\MalzemeEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokFormlari\MalzemeEkle.Designer.cs">
+      <DependentUpon>MalzemeEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokFormlari\HamStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokFormlari\HamStok.Designer.cs">
+      <DependentUpon>HamStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StokFormlari\StokMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StokFormlari\StokMenu.Designer.cs">
+      <DependentUpon>StokMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stok\Services\SevkAlani.cs" />
+    <Compile Include="Stok\Services\SevkIrsaliye.cs" />
+    <EmbeddedResource Include="BakimFormlari\AnaForm.resx">
+      <DependentUpon>BakimMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BakimFormlari\Bakim.resx">
+      <DependentUpon>Bakim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BakimFormlari\BakimRaporlari.resx">
+      <DependentUpon>BakimRaporlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BakimFormlari\Firma.resx">
+      <DependentUpon>Firma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BakimFormlari\KullaniciBilgileri.resx">
+      <DependentUpon>KullaniciBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BakimFormlari\Tezgah.resx">
+      <DependentUpon>Tezgah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giris.resx">
+      <DependentUpon>Giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="StokFormlari\HamMalzemeSevk.resx">
+      <DependentUpon>HamMalzemeSevk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokFormlari\IslenmisMalzemeSevk.resx">
+      <DependentUpon>IslenmisMalzemeSevk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokFormlari\MalzemeEkle.resx">
+      <DependentUpon>MalzemeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokFormlari\HamStok.resx">
+      <DependentUpon>HamStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokFormlari\Malzemeler.resx">
+      <DependentUpon>Malzemeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokFormlari\Musteri.resx">
+      <DependentUpon>Musteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokFormlari\MusteriyeSevk.resx">
+      <DependentUpon>MusteriyeSevk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokFormlari\RaporFormlari\HamMalzemeRaporAna.resx">
+      <DependentUpon>HamMalzemeRaporAna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokFormlari\SarjEkle.resx">
+      <DependentUpon>SarjEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StokFormlari\StokMenu.resx">
+      <DependentUpon>StokMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Stok\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\FirmaTakip.WinUI.Stok.FirmaTakipDB.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FirmaTakip.DTO\FirmaTakip.DTO.csproj">
+      <Project>{BDE5709D-00E3-49DA-B8BF-2FC5942F2833}</Project>
+      <Name>FirmaTakip.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FirmaTakip.Services\FirmaTakip.Services.csproj">
+      <Project>{0FDF0D35-43D7-4311-AA2A-FD36C00E6517}</Project>
+      <Name>FirmaTakip.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sametson\sametson.csproj">
+      <Project>{A57874B4-91FE-4BD3-B294-858DEB9C301F}</Project>
+      <Name>sametson</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="maintenance_time.ico" />
+    <None Include="Resources\SevkAlani.png" />
+    <None Include="Resources\islemesevk.png" />
+    <None Include="Resources\musterisevk.png" />
+    <None Include="Resources\stokrapor.png" />
+    <None Include="Resources\bakimlar1.png" />
+    <None Include="Resources\report.png" />
+    <None Include="Resources\company.png" />
+    <None Include="Resources\Tezgah.png" />
+    <None Include="Resources\report %283%29.png" />
+    <None Include="Resources\compliance.png" />
+    <None Include="Resources\malzemeler.png" />
+    <None Include="Resources\kasa.png" />
+    <None Include="Resources\stok.png" />
+    <None Include="Resources\bakimlar.png" />
+    <None Include="Resources\User Folder.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

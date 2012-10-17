@@ -1,0 +1,1427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="FirmaTakipDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="FirmaTakipDBModelStoreContainer">
+          <EntitySet Name="Birim" EntityType="FirmaTakipDBModel.Store.Birim" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CookieSevkIrsaliyeDetay" EntityType="FirmaTakipDBModel.Store.CookieSevkIrsaliyeDetay" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HamMalzeme" EntityType="FirmaTakipDBModel.Store.HamMalzeme" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HamStok" EntityType="FirmaTakipDBModel.Store.HamStok" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HamStokDetay" EntityType="FirmaTakipDBModel.Store.HamStokDetay" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HurdaAlani" EntityType="FirmaTakipDBModel.Store.HurdaAlani" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="IslenmisMalzeme" EntityType="FirmaTakipDBModel.Store.IslenmisMalzeme" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="IslenmisMalzemeDetay" EntityType="FirmaTakipDBModel.Store.IslenmisMalzemeDetay" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Musteri" EntityType="FirmaTakipDBModel.Store.Musteri" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sarj" EntityType="FirmaTakipDBModel.Store.Sarj" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SevkAlani" EntityType="FirmaTakipDBModel.Store.SevkAlani" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SevkIrsaliye" EntityType="FirmaTakipDBModel.Store.SevkIrsaliye" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SevkIrsaliyeDetay" EntityType="FirmaTakipDBModel.Store.SevkIrsaliyeDetay" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="FirmaTakipDBModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_CookieSevkIrsaliyeDetay_HurdaAlani1" Association="FirmaTakipDBModel.Store.FK_CookieSevkIrsaliyeDetay_HurdaAlani1">
+            <End Role="HurdaAlani" EntitySet="HurdaAlani" />
+            <End Role="CookieSevkIrsaliyeDetay" EntitySet="CookieSevkIrsaliyeDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CookieSevkIrsaliyeDetay_SevkAlani1" Association="FirmaTakipDBModel.Store.FK_CookieSevkIrsaliyeDetay_SevkAlani1">
+            <End Role="SevkAlani" EntitySet="SevkAlani" />
+            <End Role="CookieSevkIrsaliyeDetay" EntitySet="CookieSevkIrsaliyeDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HamMalzeme_Birim" Association="FirmaTakipDBModel.Store.FK_HamMalzeme_Birim">
+            <End Role="Birim" EntitySet="Birim" />
+            <End Role="HamMalzeme" EntitySet="HamMalzeme" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HamStokDetay_HamStok" Association="FirmaTakipDBModel.Store.FK_HamStokDetay_HamStok">
+            <End Role="HamStok" EntitySet="HamStok" />
+            <End Role="HamStokDetay" EntitySet="HamStokDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HamStokDetay_Sarj" Association="FirmaTakipDBModel.Store.FK_HamStokDetay_Sarj">
+            <End Role="Sarj" EntitySet="Sarj" />
+            <End Role="HamStokDetay" EntitySet="HamStokDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HurdaAlani_IslenmisMalzemeDetay" Association="FirmaTakipDBModel.Store.FK_HurdaAlani_IslenmisMalzemeDetay">
+            <End Role="IslenmisMalzemeDetay" EntitySet="IslenmisMalzemeDetay" />
+            <End Role="HurdaAlani" EntitySet="HurdaAlani" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IslenmisMalzeme_Birim" Association="FirmaTakipDBModel.Store.FK_IslenmisMalzeme_Birim">
+            <End Role="Birim" EntitySet="Birim" />
+            <End Role="IslenmisMalzeme" EntitySet="IslenmisMalzeme" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IslenmisMalzeme_HamMalzeme" Association="FirmaTakipDBModel.Store.FK_IslenmisMalzeme_HamMalzeme">
+            <End Role="HamMalzeme" EntitySet="HamMalzeme" />
+            <End Role="IslenmisMalzeme" EntitySet="IslenmisMalzeme" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IslenmisMalzemeDetay_HamStokDetay" Association="FirmaTakipDBModel.Store.FK_IslenmisMalzemeDetay_HamStokDetay">
+            <End Role="HamStokDetay" EntitySet="HamStokDetay" />
+            <End Role="IslenmisMalzemeDetay" EntitySet="IslenmisMalzemeDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IslenmisMalzemeDetay_IslenmisMalzeme" Association="FirmaTakipDBModel.Store.FK_IslenmisMalzemeDetay_IslenmisMalzeme">
+            <End Role="IslenmisMalzeme" EntitySet="IslenmisMalzeme" />
+            <End Role="IslenmisMalzemeDetay" EntitySet="IslenmisMalzemeDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sarj_HamMalzeme" Association="FirmaTakipDBModel.Store.FK_Sarj_HamMalzeme">
+            <End Role="HamMalzeme" EntitySet="HamMalzeme" />
+            <End Role="Sarj" EntitySet="Sarj" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SevkAlani_IslenmisMalzemeDetay" Association="FirmaTakipDBModel.Store.FK_SevkAlani_IslenmisMalzemeDetay">
+            <End Role="IslenmisMalzemeDetay" EntitySet="IslenmisMalzemeDetay" />
+            <End Role="SevkAlani" EntitySet="SevkAlani" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SevkIrsaliye_Musteri" Association="FirmaTakipDBModel.Store.FK_SevkIrsaliye_Musteri">
+            <End Role="Musteri" EntitySet="Musteri" />
+            <End Role="SevkIrsaliye" EntitySet="SevkIrsaliye" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SevkIrsaliyeDetay_HurdaAlani" Association="FirmaTakipDBModel.Store.FK_SevkIrsaliyeDetay_HurdaAlani">
+            <End Role="HurdaAlani" EntitySet="HurdaAlani" />
+            <End Role="SevkIrsaliyeDetay" EntitySet="SevkIrsaliyeDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SevkIrsaliyeDetay_SevkAlani" Association="FirmaTakipDBModel.Store.FK_SevkIrsaliyeDetay_SevkAlani">
+            <End Role="SevkAlani" EntitySet="SevkAlani" />
+            <End Role="SevkIrsaliyeDetay" EntitySet="SevkIrsaliyeDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SevkIrsaliyeDetay_SevkIrsaliye" Association="FirmaTakipDBModel.Store.FK_SevkIrsaliyeDetay_SevkIrsaliye">
+            <End Role="SevkIrsaliye" EntitySet="SevkIrsaliye" />
+            <End Role="SevkIrsaliyeDetay" EntitySet="SevkIrsaliyeDetay" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Birim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Adi" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CookieSevkIrsaliyeDetay">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HurdaAlaniId" Type="int" />
+          <Property Name="IsHurda" Type="bit" Nullable="false" />
+          <Property Name="Miktar" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="SevkAlaniId" Type="int" />
+        </EntityType>
+        <EntityType Name="HamMalzeme">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Adi" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="No" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="BirimId" Type="int" Nullable="false" />
+          <Property Name="IsAktif" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HamStok">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Tarih" Type="datetime" Nullable="false" />
+          <Property Name="IrsaliyeNo" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Aciklama" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="IsAktif" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HamStokDetay">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SarjId" Type="int" Nullable="false" />
+          <Property Name="HamStokId" Type="int" Nullable="false" />
+          <Property Name="Miktar" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="SevkMiktar" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="HurdaAlani">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IslenmisMalzemeDetayId" Type="int" Nullable="false" />
+          <Property Name="Miktar" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="SevkMiktar" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="Tarih" Type="datetime" Nullable="false" />
+          <Property Name="Aciklama" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="IslenmisMalzeme">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Adi" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="No" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="HamMalzemeId" Type="int" Nullable="false" />
+          <Property Name="BirimId" Type="int" Nullable="false" />
+          <Property Name="IsAktif" Type="bit" Nullable="false" />
+          <Property Name="KatSayi" Type="decimal" Nullable="false" Precision="8" Scale="2" />
+        </EntityType>
+        <EntityType Name="IslenmisMalzemeDetay">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IslenmisMalzemeId" Type="int" Nullable="false" />
+          <Property Name="HamStokDetayId" Type="bigint" Nullable="false" />
+          <Property Name="Miktar" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="SevkMiktar" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="Tarih" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Musteri">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Adi" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="IsAktif" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sarj">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="No" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="HamMalzemeId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SevkAlani">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IslenmisMalzemeDetayId" Type="int" Nullable="false" />
+          <Property Name="KasaNo" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Miktar" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="SevkEdildi" Type="bit" Nullable="false" />
+          <Property Name="Tarih" Type="datetime" Nullable="false" />
+          <Property Name="Aciklama" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="SevkIrsaliye">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MusteriId" Type="int" Nullable="false" />
+          <Property Name="Tarih" Type="datetime" Nullable="false" />
+          <Property Name="IrsaliyeNo" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Aciklama" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="SevkIrsaliyeDetay">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SevkIrsaliyeId" Type="int" Nullable="false" />
+          <Property Name="IsHurda" Type="bit" Nullable="false" />
+          <Property Name="Miktar" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="SevkAlaniId" Type="int" />
+          <Property Name="HurdaAlaniId" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_CookieSevkIrsaliyeDetay_HurdaAlani1">
+          <End Role="HurdaAlani" Type="FirmaTakipDBModel.Store.HurdaAlani" Multiplicity="0..1" />
+          <End Role="CookieSevkIrsaliyeDetay" Type="FirmaTakipDBModel.Store.CookieSevkIrsaliyeDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HurdaAlani">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CookieSevkIrsaliyeDetay">
+              <PropertyRef Name="HurdaAlaniId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CookieSevkIrsaliyeDetay_SevkAlani1">
+          <End Role="SevkAlani" Type="FirmaTakipDBModel.Store.SevkAlani" Multiplicity="0..1" />
+          <End Role="CookieSevkIrsaliyeDetay" Type="FirmaTakipDBModel.Store.CookieSevkIrsaliyeDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SevkAlani">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CookieSevkIrsaliyeDetay">
+              <PropertyRef Name="SevkAlaniId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HamMalzeme_Birim">
+          <End Role="Birim" Type="FirmaTakipDBModel.Store.Birim" Multiplicity="1" />
+          <End Role="HamMalzeme" Type="FirmaTakipDBModel.Store.HamMalzeme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Birim">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HamMalzeme">
+              <PropertyRef Name="BirimId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HamStokDetay_HamStok">
+          <End Role="HamStok" Type="FirmaTakipDBModel.Store.HamStok" Multiplicity="1" />
+          <End Role="HamStokDetay" Type="FirmaTakipDBModel.Store.HamStokDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HamStok">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HamStokDetay">
+              <PropertyRef Name="HamStokId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HamStokDetay_Sarj">
+          <End Role="Sarj" Type="FirmaTakipDBModel.Store.Sarj" Multiplicity="1" />
+          <End Role="HamStokDetay" Type="FirmaTakipDBModel.Store.HamStokDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sarj">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HamStokDetay">
+              <PropertyRef Name="SarjId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HurdaAlani_IslenmisMalzemeDetay">
+          <End Role="IslenmisMalzemeDetay" Type="FirmaTakipDBModel.Store.IslenmisMalzemeDetay" Multiplicity="1" />
+          <End Role="HurdaAlani" Type="FirmaTakipDBModel.Store.HurdaAlani" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IslenmisMalzemeDetay">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HurdaAlani">
+              <PropertyRef Name="IslenmisMalzemeDetayId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IslenmisMalzeme_Birim">
+          <End Role="Birim" Type="FirmaTakipDBModel.Store.Birim" Multiplicity="1" />
+          <End Role="IslenmisMalzeme" Type="FirmaTakipDBModel.Store.IslenmisMalzeme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Birim">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="IslenmisMalzeme">
+              <PropertyRef Name="BirimId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IslenmisMalzeme_HamMalzeme">
+          <End Role="HamMalzeme" Type="FirmaTakipDBModel.Store.HamMalzeme" Multiplicity="1" />
+          <End Role="IslenmisMalzeme" Type="FirmaTakipDBModel.Store.IslenmisMalzeme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HamMalzeme">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="IslenmisMalzeme">
+              <PropertyRef Name="HamMalzemeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IslenmisMalzemeDetay_HamStokDetay">
+          <End Role="HamStokDetay" Type="FirmaTakipDBModel.Store.HamStokDetay" Multiplicity="1" />
+          <End Role="IslenmisMalzemeDetay" Type="FirmaTakipDBModel.Store.IslenmisMalzemeDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HamStokDetay">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="IslenmisMalzemeDetay">
+              <PropertyRef Name="HamStokDetayId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IslenmisMalzemeDetay_IslenmisMalzeme">
+          <End Role="IslenmisMalzeme" Type="FirmaTakipDBModel.Store.IslenmisMalzeme" Multiplicity="1" />
+          <End Role="IslenmisMalzemeDetay" Type="FirmaTakipDBModel.Store.IslenmisMalzemeDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IslenmisMalzeme">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="IslenmisMalzemeDetay">
+              <PropertyRef Name="IslenmisMalzemeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sarj_HamMalzeme">
+          <End Role="HamMalzeme" Type="FirmaTakipDBModel.Store.HamMalzeme" Multiplicity="1" />
+          <End Role="Sarj" Type="FirmaTakipDBModel.Store.Sarj" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HamMalzeme">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sarj">
+              <PropertyRef Name="HamMalzemeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SevkAlani_IslenmisMalzemeDetay">
+          <End Role="IslenmisMalzemeDetay" Type="FirmaTakipDBModel.Store.IslenmisMalzemeDetay" Multiplicity="1" />
+          <End Role="SevkAlani" Type="FirmaTakipDBModel.Store.SevkAlani" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IslenmisMalzemeDetay">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SevkAlani">
+              <PropertyRef Name="IslenmisMalzemeDetayId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SevkIrsaliye_Musteri">
+          <End Role="Musteri" Type="FirmaTakipDBModel.Store.Musteri" Multiplicity="1" />
+          <End Role="SevkIrsaliye" Type="FirmaTakipDBModel.Store.SevkIrsaliye" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Musteri">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SevkIrsaliye">
+              <PropertyRef Name="MusteriId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SevkIrsaliyeDetay_HurdaAlani">
+          <End Role="HurdaAlani" Type="FirmaTakipDBModel.Store.HurdaAlani" Multiplicity="0..1" />
+          <End Role="SevkIrsaliyeDetay" Type="FirmaTakipDBModel.Store.SevkIrsaliyeDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HurdaAlani">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SevkIrsaliyeDetay">
+              <PropertyRef Name="HurdaAlaniId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SevkIrsaliyeDetay_SevkAlani">
+          <End Role="SevkAlani" Type="FirmaTakipDBModel.Store.SevkAlani" Multiplicity="0..1" />
+          <End Role="SevkIrsaliyeDetay" Type="FirmaTakipDBModel.Store.SevkIrsaliyeDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SevkAlani">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SevkIrsaliyeDetay">
+              <PropertyRef Name="SevkAlaniId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SevkIrsaliyeDetay_SevkIrsaliye">
+          <End Role="SevkIrsaliye" Type="FirmaTakipDBModel.Store.SevkIrsaliye" Multiplicity="1" />
+          <End Role="SevkIrsaliyeDetay" Type="FirmaTakipDBModel.Store.SevkIrsaliyeDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SevkIrsaliye">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SevkIrsaliyeDetay">
+              <PropertyRef Name="SevkIrsaliyeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="HamMalzemeEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Adi" Type="nvarchar" Mode="In" />
+          <Parameter Name="No" Type="nvarchar" Mode="In" />
+          <Parameter Name="BirimId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="HamMalzemeGuncelle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+          <Parameter Name="Adi" Type="nvarchar" Mode="In" />
+          <Parameter Name="No" Type="nvarchar" Mode="In" />
+          <Parameter Name="BirimId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="HamMalzemeSil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+          <Parameter Name="IsAktif" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="HamStokDetayEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SarjId" Type="bigint" Mode="In" />
+          <Parameter Name="HamStokId" Type="int" Mode="In" />
+          <Parameter Name="Miktar" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="HamStokDetayGuncelle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="bigint" Mode="In" />
+          <Parameter Name="SarjId" Type="int" Mode="In" />
+          <Parameter Name="HamStokId" Type="int" Mode="In" />
+          <Parameter Name="Miktar" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="HamStokDetaySevkMiktar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="bigint" Mode="In" />
+          <Parameter Name="SevkMiktar" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="HamStokDetaySil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="HamStokEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Tarih" Type="datetime" Mode="In" />
+          <Parameter Name="IrsaliyeNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="Aciklama" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="HamStokGuncelle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+          <Parameter Name="Tarih" Type="datetime" Mode="In" />
+          <Parameter Name="IrsaliyeNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="Aciklama" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="HamStokSil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+          <Parameter Name="IsAktif" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="HurdaEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IslenmisMalzemeDetayId" Type="int" Mode="In" />
+          <Parameter Name="Miktar" Type="decimal" Mode="In" />
+          <Parameter Name="Aciklama" Type="nvarchar" Mode="In" />
+          <Parameter Name="Tarih" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="HurdaSil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="IslenmisMalzemeDetayEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IslenmisMalzemeId" Type="int" Mode="In" />
+          <Parameter Name="HamStokDetayId" Type="bigint" Mode="In" />
+          <Parameter Name="Miktar" Type="decimal" Mode="In" />
+          <Parameter Name="Tarih" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="IslenmisMalzemeDetayGuncelle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+          <Parameter Name="IslenmisMalzemeId" Type="int" Mode="In" />
+          <Parameter Name="HamStokDetayId" Type="bigint" Mode="In" />
+          <Parameter Name="Miktar" Type="decimal" Mode="In" />
+          <Parameter Name="Tarih" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="IslenmisMalzemeDetaySevkMiktar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="bigint" Mode="In" />
+          <Parameter Name="SevkMiktar" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="IslenmisMalzemeDetaySil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="IslenmisMalzemeEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Adi" Type="nvarchar" Mode="In" />
+          <Parameter Name="No" Type="nvarchar" Mode="In" />
+          <Parameter Name="HamMalzemeId" Type="int" Mode="In" />
+          <Parameter Name="BirimId" Type="int" Mode="In" />
+          <Parameter Name="KatSayi" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="IslenmisMalzemeGuncelle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+          <Parameter Name="Adi" Type="nvarchar" Mode="In" />
+          <Parameter Name="No" Type="nvarchar" Mode="In" />
+          <Parameter Name="HamMalzemeId" Type="int" Mode="In" />
+          <Parameter Name="BirimId" Type="int" Mode="In" />
+          <Parameter Name="KatSayi" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="IslenmisMalzemeSil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+          <Parameter Name="IsAktif" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="SarjEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="No" Type="nvarchar" Mode="In" />
+          <Parameter Name="HamMalzemeId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SarjGuncelle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+          <Parameter Name="No" Type="nvarchar" Mode="In" />
+          <Parameter Name="HamMalzemeId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SarjSil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SevkAlaniEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IslenmisMalzemeDetayId" Type="int" Mode="In" />
+          <Parameter Name="KasaNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="Miktar" Type="decimal" Mode="In" />
+          <Parameter Name="Aciklama" Type="nvarchar" Mode="In" />
+          <Parameter Name="Tarih" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="SevkAlaniSil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FirmaTakipDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="FirmaTakipDB" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="HamMalzemeEkle">
+            <Parameter Name="Adi" Mode="In" Type="String" />
+            <Parameter Name="No" Mode="In" Type="String" />
+            <Parameter Name="BirimId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="HamMalzemeGuncelle">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="Adi" Mode="In" Type="String" />
+            <Parameter Name="No" Mode="In" Type="String" />
+            <Parameter Name="BirimId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="HamMalzemeSil">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="IsAktif" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="HamStokDetayEkle">
+            <Parameter Name="SarjId" Mode="In" Type="Int64" />
+            <Parameter Name="HamStokId" Mode="In" Type="Int32" />
+            <Parameter Name="Miktar" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="HamStokDetayGuncelle">
+            <Parameter Name="Id" Mode="In" Type="Int64" />
+            <Parameter Name="SarjId" Mode="In" Type="Int32" />
+            <Parameter Name="HamStokId" Mode="In" Type="Int32" />
+            <Parameter Name="Miktar" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="HamStokDetaySevkMiktar">
+            <Parameter Name="Id" Mode="In" Type="Int64" />
+            <Parameter Name="SevkMiktar" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="HamStokDetaySil">
+          <Parameter Name="Id" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="HamStokEkle">
+            <Parameter Name="Tarih" Mode="In" Type="DateTime" />
+            <Parameter Name="IrsaliyeNo" Mode="In" Type="String" />
+            <Parameter Name="Aciklama" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="HamStokGuncelle">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="Tarih" Mode="In" Type="DateTime" />
+            <Parameter Name="IrsaliyeNo" Mode="In" Type="String" />
+            <Parameter Name="Aciklama" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="HamStokSil">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="IsAktif" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="HurdaEkle">
+            <Parameter Name="IslenmisMalzemeDetayId" Mode="In" Type="Int32" />
+            <Parameter Name="Miktar" Mode="In" Type="Decimal" />
+            <Parameter Name="Aciklama" Mode="In" Type="String" />
+            <Parameter Name="Tarih" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="HurdaSil">
+          <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="IslenmisMalzemeDetayEkle">
+            <Parameter Name="IslenmisMalzemeId" Mode="In" Type="Int32" />
+            <Parameter Name="HamStokDetayId" Mode="In" Type="Int64" />
+            <Parameter Name="Miktar" Mode="In" Type="Decimal" />
+            <Parameter Name="Tarih" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="IslenmisMalzemeDetayGuncelle">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="IslenmisMalzemeId" Mode="In" Type="Int32" />
+            <Parameter Name="HamStokDetayId" Mode="In" Type="Int64" />
+            <Parameter Name="Miktar" Mode="In" Type="Decimal" />
+            <Parameter Name="Tarih" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="IslenmisMalzemeDetaySevkMiktar">
+            <Parameter Name="Id" Mode="In" Type="Int64" />
+            <Parameter Name="SevkMiktar" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="IslenmisMalzemeDetaySil">
+          <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="IslenmisMalzemeEkle">
+            <Parameter Name="Adi" Mode="In" Type="String" />
+            <Parameter Name="No" Mode="In" Type="String" />
+            <Parameter Name="HamMalzemeId" Mode="In" Type="Int32" />
+            <Parameter Name="BirimId" Mode="In" Type="Int32" />
+            <Parameter Name="KatSayi" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="IslenmisMalzemeGuncelle">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="Adi" Mode="In" Type="String" />
+            <Parameter Name="No" Mode="In" Type="String" />
+            <Parameter Name="HamMalzemeId" Mode="In" Type="Int32" />
+            <Parameter Name="BirimId" Mode="In" Type="Int32" />
+            <Parameter Name="KatSayi" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="IslenmisMalzemeSil">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="IsAktif" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="SarjEkle">
+            <Parameter Name="No" Mode="In" Type="String" />
+            <Parameter Name="HamMalzemeId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SarjGuncelle">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="No" Mode="In" Type="String" />
+            <Parameter Name="HamMalzemeId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SarjSil">
+          <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SevkAlaniEkle">
+            <Parameter Name="IslenmisMalzemeDetayId" Mode="In" Type="Int32" />
+            <Parameter Name="KasaNo" Mode="In" Type="String" />
+            <Parameter Name="Miktar" Mode="In" Type="Decimal" />
+            <Parameter Name="Aciklama" Mode="In" Type="String" />
+            <Parameter Name="Tarih" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="SevkAlaniSil">
+          <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="Birim" EntityType="FirmaTakipDBModel.Birim" />
+          <EntitySet Name="CookieSevkIrsaliyeDetay" EntityType="FirmaTakipDBModel.CookieSevkIrsaliyeDetay" />
+          <EntitySet Name="HamMalzeme" EntityType="FirmaTakipDBModel.HamMalzeme" />
+          <EntitySet Name="HamStok" EntityType="FirmaTakipDBModel.HamStok" />
+          <EntitySet Name="HamStokDetay" EntityType="FirmaTakipDBModel.HamStokDetay" />
+          <EntitySet Name="HurdaAlani" EntityType="FirmaTakipDBModel.HurdaAlani" />
+          <EntitySet Name="IslenmisMalzeme" EntityType="FirmaTakipDBModel.IslenmisMalzeme" />
+          <EntitySet Name="IslenmisMalzemeDetay" EntityType="FirmaTakipDBModel.IslenmisMalzemeDetay" />
+          <EntitySet Name="Musteri" EntityType="FirmaTakipDBModel.Musteri" />
+          <EntitySet Name="Sarj" EntityType="FirmaTakipDBModel.Sarj" />
+          <EntitySet Name="SevkAlani" EntityType="FirmaTakipDBModel.SevkAlani" />
+          <EntitySet Name="SevkIrsaliye" EntityType="FirmaTakipDBModel.SevkIrsaliye" />
+          <EntitySet Name="SevkIrsaliyeDetay" EntityType="FirmaTakipDBModel.SevkIrsaliyeDetay" />
+          <EntitySet Name="sysdiagrams" EntityType="FirmaTakipDBModel.sysdiagrams" />
+          <AssociationSet Name="FK_HamMalzeme_Birim" Association="FirmaTakipDBModel.FK_HamMalzeme_Birim">
+            <End Role="Birim" EntitySet="Birim" />
+            <End Role="HamMalzeme" EntitySet="HamMalzeme" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IslenmisMalzeme_Birim" Association="FirmaTakipDBModel.FK_IslenmisMalzeme_Birim">
+            <End Role="Birim" EntitySet="Birim" />
+            <End Role="IslenmisMalzeme" EntitySet="IslenmisMalzeme" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CookieSevkIrsaliyeDetay_HurdaAlani1" Association="FirmaTakipDBModel.FK_CookieSevkIrsaliyeDetay_HurdaAlani1">
+            <End Role="HurdaAlani" EntitySet="HurdaAlani" />
+            <End Role="CookieSevkIrsaliyeDetay" EntitySet="CookieSevkIrsaliyeDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CookieSevkIrsaliyeDetay_SevkAlani1" Association="FirmaTakipDBModel.FK_CookieSevkIrsaliyeDetay_SevkAlani1">
+            <End Role="SevkAlani" EntitySet="SevkAlani" />
+            <End Role="CookieSevkIrsaliyeDetay" EntitySet="CookieSevkIrsaliyeDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IslenmisMalzeme_HamMalzeme" Association="FirmaTakipDBModel.FK_IslenmisMalzeme_HamMalzeme">
+            <End Role="HamMalzeme" EntitySet="HamMalzeme" />
+            <End Role="IslenmisMalzeme" EntitySet="IslenmisMalzeme" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sarj_HamMalzeme" Association="FirmaTakipDBModel.FK_Sarj_HamMalzeme">
+            <End Role="HamMalzeme" EntitySet="HamMalzeme" />
+            <End Role="Sarj" EntitySet="Sarj" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HamStokDetay_HamStok" Association="FirmaTakipDBModel.FK_HamStokDetay_HamStok">
+            <End Role="HamStok" EntitySet="HamStok" />
+            <End Role="HamStokDetay" EntitySet="HamStokDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HamStokDetay_Sarj" Association="FirmaTakipDBModel.FK_HamStokDetay_Sarj">
+            <End Role="Sarj" EntitySet="Sarj" />
+            <End Role="HamStokDetay" EntitySet="HamStokDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IslenmisMalzemeDetay_HamStokDetay" Association="FirmaTakipDBModel.FK_IslenmisMalzemeDetay_HamStokDetay">
+            <End Role="HamStokDetay" EntitySet="HamStokDetay" />
+            <End Role="IslenmisMalzemeDetay" EntitySet="IslenmisMalzemeDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HurdaAlani_IslenmisMalzemeDetay" Association="FirmaTakipDBModel.FK_HurdaAlani_IslenmisMalzemeDetay">
+            <End Role="IslenmisMalzemeDetay" EntitySet="IslenmisMalzemeDetay" />
+            <End Role="HurdaAlani" EntitySet="HurdaAlani" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SevkIrsaliyeDetay_HurdaAlani" Association="FirmaTakipDBModel.FK_SevkIrsaliyeDetay_HurdaAlani">
+            <End Role="HurdaAlani" EntitySet="HurdaAlani" />
+            <End Role="SevkIrsaliyeDetay" EntitySet="SevkIrsaliyeDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IslenmisMalzemeDetay_IslenmisMalzeme" Association="FirmaTakipDBModel.FK_IslenmisMalzemeDetay_IslenmisMalzeme">
+            <End Role="IslenmisMalzeme" EntitySet="IslenmisMalzeme" />
+            <End Role="IslenmisMalzemeDetay" EntitySet="IslenmisMalzemeDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SevkAlani_IslenmisMalzemeDetay" Association="FirmaTakipDBModel.FK_SevkAlani_IslenmisMalzemeDetay">
+            <End Role="IslenmisMalzemeDetay" EntitySet="IslenmisMalzemeDetay" />
+            <End Role="SevkAlani" EntitySet="SevkAlani" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SevkIrsaliye_Musteri" Association="FirmaTakipDBModel.FK_SevkIrsaliye_Musteri">
+            <End Role="Musteri" EntitySet="Musteri" />
+            <End Role="SevkIrsaliye" EntitySet="SevkIrsaliye" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SevkIrsaliyeDetay_SevkAlani" Association="FirmaTakipDBModel.FK_SevkIrsaliyeDetay_SevkAlani">
+            <End Role="SevkAlani" EntitySet="SevkAlani" />
+            <End Role="SevkIrsaliyeDetay" EntitySet="SevkIrsaliyeDetay" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SevkIrsaliyeDetay_SevkIrsaliye" Association="FirmaTakipDBModel.FK_SevkIrsaliyeDetay_SevkIrsaliye">
+            <End Role="SevkIrsaliye" EntitySet="SevkIrsaliye" />
+            <End Role="SevkIrsaliyeDetay" EntitySet="SevkIrsaliyeDetay" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Birim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Adi" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="HamMalzeme" Relationship="FirmaTakipDBModel.FK_HamMalzeme_Birim" FromRole="Birim" ToRole="HamMalzeme" />
+          <NavigationProperty Name="IslenmisMalzeme" Relationship="FirmaTakipDBModel.FK_IslenmisMalzeme_Birim" FromRole="Birim" ToRole="IslenmisMalzeme" />
+        </EntityType>
+        <EntityType Name="CookieSevkIrsaliyeDetay">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="HurdaAlaniId" />
+          <Property Type="Boolean" Name="IsHurda" Nullable="false" />
+          <Property Type="Decimal" Name="Miktar" Nullable="false" Precision="10" Scale="2" />
+          <Property Type="Int32" Name="SevkAlaniId" />
+          <NavigationProperty Name="HurdaAlani" Relationship="FirmaTakipDBModel.FK_CookieSevkIrsaliyeDetay_HurdaAlani1" FromRole="CookieSevkIrsaliyeDetay" ToRole="HurdaAlani" />
+          <NavigationProperty Name="SevkAlani" Relationship="FirmaTakipDBModel.FK_CookieSevkIrsaliyeDetay_SevkAlani1" FromRole="CookieSevkIrsaliyeDetay" ToRole="SevkAlani" />
+        </EntityType>
+        <EntityType Name="HamMalzeme">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Adi" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="No" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="BirimId" Nullable="false" />
+          <Property Type="Boolean" Name="IsAktif" Nullable="false" />
+          <NavigationProperty Name="Birim" Relationship="FirmaTakipDBModel.FK_HamMalzeme_Birim" FromRole="HamMalzeme" ToRole="Birim" />
+          <NavigationProperty Name="IslenmisMalzeme" Relationship="FirmaTakipDBModel.FK_IslenmisMalzeme_HamMalzeme" FromRole="HamMalzeme" ToRole="IslenmisMalzeme" />
+          <NavigationProperty Name="Sarj" Relationship="FirmaTakipDBModel.FK_Sarj_HamMalzeme" FromRole="HamMalzeme" ToRole="Sarj" />
+        </EntityType>
+        <EntityType Name="HamStok">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Tarih" Nullable="false" />
+          <Property Type="String" Name="IrsaliyeNo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Aciklama" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsAktif" Nullable="false" />
+          <NavigationProperty Name="HamStokDetay" Relationship="FirmaTakipDBModel.FK_HamStokDetay_HamStok" FromRole="HamStok" ToRole="HamStokDetay" />
+        </EntityType>
+        <EntityType Name="HamStokDetay">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SarjId" Nullable="false" />
+          <Property Type="Int32" Name="HamStokId" Nullable="false" />
+          <Property Type="Decimal" Name="Miktar" Nullable="false" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="SevkMiktar" Nullable="false" Precision="10" Scale="2" />
+          <NavigationProperty Name="HamStok" Relationship="FirmaTakipDBModel.FK_HamStokDetay_HamStok" FromRole="HamStokDetay" ToRole="HamStok" />
+          <NavigationProperty Name="Sarj" Relationship="FirmaTakipDBModel.FK_HamStokDetay_Sarj" FromRole="HamStokDetay" ToRole="Sarj" />
+          <NavigationProperty Name="IslenmisMalzemeDetay" Relationship="FirmaTakipDBModel.FK_IslenmisMalzemeDetay_HamStokDetay" FromRole="HamStokDetay" ToRole="IslenmisMalzemeDetay" />
+        </EntityType>
+        <EntityType Name="HurdaAlani">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IslenmisMalzemeDetayId" Nullable="false" />
+          <Property Type="Decimal" Name="Miktar" Nullable="false" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="SevkMiktar" Nullable="false" Precision="10" Scale="2" />
+          <Property Type="DateTime" Name="Tarih" Nullable="false" />
+          <Property Type="String" Name="Aciklama" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CookieSevkIrsaliyeDetay" Relationship="FirmaTakipDBModel.FK_CookieSevkIrsaliyeDetay_HurdaAlani1" FromRole="HurdaAlani" ToRole="CookieSevkIrsaliyeDetay" />
+          <NavigationProperty Name="IslenmisMalzemeDetay" Relationship="FirmaTakipDBModel.FK_HurdaAlani_IslenmisMalzemeDetay" FromRole="HurdaAlani" ToRole="IslenmisMalzemeDetay" />
+          <NavigationProperty Name="SevkIrsaliyeDetay" Relationship="FirmaTakipDBModel.FK_SevkIrsaliyeDetay_HurdaAlani" FromRole="HurdaAlani" ToRole="SevkIrsaliyeDetay" />
+        </EntityType>
+        <EntityType Name="IslenmisMalzeme">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Adi" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="No" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="HamMalzemeId" Nullable="false" />
+          <Property Type="Int32" Name="BirimId" Nullable="false" />
+          <Property Type="Boolean" Name="IsAktif" Nullable="false" />
+          <Property Type="Decimal" Name="KatSayi" Nullable="false" Precision="8" Scale="2" />
+          <NavigationProperty Name="Birim" Relationship="FirmaTakipDBModel.FK_IslenmisMalzeme_Birim" FromRole="IslenmisMalzeme" ToRole="Birim" />
+          <NavigationProperty Name="HamMalzeme" Relationship="FirmaTakipDBModel.FK_IslenmisMalzeme_HamMalzeme" FromRole="IslenmisMalzeme" ToRole="HamMalzeme" />
+          <NavigationProperty Name="IslenmisMalzemeDetay" Relationship="FirmaTakipDBModel.FK_IslenmisMalzemeDetay_IslenmisMalzeme" FromRole="IslenmisMalzeme" ToRole="IslenmisMalzemeDetay" />
+        </EntityType>
+        <EntityType Name="IslenmisMalzemeDetay">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IslenmisMalzemeId" Nullable="false" />
+          <Property Type="Int64" Name="HamStokDetayId" Nullable="false" />
+          <Property Type="Decimal" Name="Miktar" Nullable="false" Precision="10" Scale="2" />
+          <Property Type="Decimal" Name="SevkMiktar" Nullable="false" Precision="10" Scale="2" />
+          <Property Type="DateTime" Name="Tarih" Nullable="false" />
+          <NavigationProperty Name="HamStokDetay" Relationship="FirmaTakipDBModel.FK_IslenmisMalzemeDetay_HamStokDetay" FromRole="IslenmisMalzemeDetay" ToRole="HamStokDetay" />
+          <NavigationProperty Name="HurdaAlani" Relationship="FirmaTakipDBModel.FK_HurdaAlani_IslenmisMalzemeDetay" FromRole="IslenmisMalzemeDetay" ToRole="HurdaAlani" />
+          <NavigationProperty Name="IslenmisMalzeme" Relationship="FirmaTakipDBModel.FK_IslenmisMalzemeDetay_IslenmisMalzeme" FromRole="IslenmisMalzemeDetay" ToRole="IslenmisMalzeme" />
+          <NavigationProperty Name="SevkAlani" Relationship="FirmaTakipDBModel.FK_SevkAlani_IslenmisMalzemeDetay" FromRole="IslenmisMalzemeDetay" ToRole="SevkAlani" />
+        </EntityType>
+        <EntityType Name="Musteri">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Adi" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsAktif" Nullable="false" />
+          <NavigationProperty Name="SevkIrsaliye" Relationship="FirmaTakipDBModel.FK_SevkIrsaliye_Musteri" FromRole="Musteri" ToRole="SevkIrsaliye" />
+        </EntityType>
+        <EntityType Name="Sarj">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="No" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="HamMalzemeId" Nullable="false" />
+          <NavigationProperty Name="HamMalzeme" Relationship="FirmaTakipDBModel.FK_Sarj_HamMalzeme" FromRole="Sarj" ToRole="HamMalzeme" />
+          <NavigationProperty Name="HamStokDetay" Relationship="FirmaTakipDBModel.FK_HamStokDetay_Sarj" FromRole="Sarj" ToRole="HamStokDetay" />
+        </EntityType>
+        <EntityType Name="SevkAlani">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IslenmisMalzemeDetayId" Nullable="false" />
+          <Property Type="String" Name="KasaNo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Miktar" Nullable="false" Precision="10" Scale="2" />
+          <Property Type="Boolean" Name="SevkEdildi" Nullable="false" />
+          <Property Type="DateTime" Name="Tarih" Nullable="false" />
+          <Property Type="String" Name="Aciklama" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CookieSevkIrsaliyeDetay" Relationship="FirmaTakipDBModel.FK_CookieSevkIrsaliyeDetay_SevkAlani1" FromRole="SevkAlani" ToRole="CookieSevkIrsaliyeDetay" />
+          <NavigationProperty Name="IslenmisMalzemeDetay" Relationship="FirmaTakipDBModel.FK_SevkAlani_IslenmisMalzemeDetay" FromRole="SevkAlani" ToRole="IslenmisMalzemeDetay" />
+          <NavigationProperty Name="SevkIrsaliyeDetay" Relationship="FirmaTakipDBModel.FK_SevkIrsaliyeDetay_SevkAlani" FromRole="SevkAlani" ToRole="SevkIrsaliyeDetay" />
+        </EntityType>
+        <EntityType Name="SevkIrsaliye">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="MusteriId" Nullable="false" />
+          <Property Type="DateTime" Name="Tarih" Nullable="false" />
+          <Property Type="String" Name="IrsaliyeNo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Aciklama" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Musteri" Relationship="FirmaTakipDBModel.FK_SevkIrsaliye_Musteri" FromRole="SevkIrsaliye" ToRole="Musteri" />
+          <NavigationProperty Name="SevkIrsaliyeDetay" Relationship="FirmaTakipDBModel.FK_SevkIrsaliyeDetay_SevkIrsaliye" FromRole="SevkIrsaliye" ToRole="SevkIrsaliyeDetay" />
+        </EntityType>
+        <EntityType Name="SevkIrsaliyeDetay">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SevkIrsaliyeId" Nullable="false" />
+          <Property Type="Boolean" Name="IsHurda" Nullable="false" />
+          <Property Type="Decimal" Name="Miktar" Nullable="false" Precision="10" Scale="2" />
+          <Property Type="Int32" Name="SevkAlaniId" />
+          <Property Type="Int32" Name="HurdaAlaniId" />
+          <NavigationProperty Name="HurdaAlani" Relationship="FirmaTakipDBModel.FK_SevkIrsaliyeDetay_HurdaAlani" FromRole="SevkIrsaliyeDetay" ToRole="HurdaAlani" />
+          <NavigationProperty Name="SevkAlani" Relationship="FirmaTakipDBModel.FK_SevkIrsaliyeDetay_SevkAlani" FromRole="SevkIrsaliyeDetay" ToRole="SevkAlani" />
+          <NavigationProperty Name="SevkIrsaliye" Relationship="FirmaTakipDBModel.FK_SevkIrsaliyeDetay_SevkIrsaliye" FromRole="SevkIrsaliyeDetay" ToRole="SevkIrsaliye" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="principal_id" Nullable="false" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="version" />
+          <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_HamMalzeme_Birim">
+          <End Type="FirmaTakipDBModel.Birim" Role="Birim" Multiplicity="1" />
+          <End Type="FirmaTakipDBModel.HamMalzeme" Role="HamMalzeme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Birim">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HamMalzeme">
+              <PropertyRef Name="BirimId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IslenmisMalzeme_Birim">
+          <End Type="FirmaTakipDBModel.Birim" Role="Birim" Multiplicity="1" />
+          <End Type="FirmaTakipDBModel.IslenmisMalzeme" Role="IslenmisMalzeme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Birim">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="IslenmisMalzeme">
+              <PropertyRef Name="BirimId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CookieSevkIrsaliyeDetay_HurdaAlani1">
+          <End Type="FirmaTakipDBModel.HurdaAlani" Role="HurdaAlani" Multiplicity="0..1" />
+          <End Type="FirmaTakipDBModel.CookieSevkIrsaliyeDetay" Role="CookieSevkIrsaliyeDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HurdaAlani">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CookieSevkIrsaliyeDetay">
+              <PropertyRef Name="HurdaAlaniId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CookieSevkIrsaliyeDetay_SevkAlani1">
+          <End Type="FirmaTakipDBModel.SevkAlani" Role="SevkAlani" Multiplicity="0..1" />
+          <End Type="FirmaTakipDBModel.CookieSevkIrsaliyeDetay" Role="CookieSevkIrsaliyeDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SevkAlani">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CookieSevkIrsaliyeDetay">
+              <PropertyRef Name="SevkAlaniId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IslenmisMalzeme_HamMalzeme">
+          <End Type="FirmaTakipDBModel.HamMalzeme" Role="HamMalzeme" Multiplicity="1" />
+          <End Type="FirmaTakipDBModel.IslenmisMalzeme" Role="IslenmisMalzeme" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HamMalzeme">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="IslenmisMalzeme">
+              <PropertyRef Name="HamMalzemeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sarj_HamMalzeme">
+          <End Type="FirmaTakipDBModel.HamMalzeme" Role="HamMalzeme" Multiplicity="1" />
+          <End Type="FirmaTakipDBModel.Sarj" Role="Sarj" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HamMalzeme">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sarj">
+              <PropertyRef Name="HamMalzemeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HamStokDetay_HamStok">
+          <End Type="FirmaTakipDBModel.HamStok" Role="HamStok" Multiplicity="1" />
+          <End Type="FirmaTakipDBModel.HamStokDetay" Role="HamStokDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HamStok">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HamStokDetay">
+              <PropertyRef Name="HamStokId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HamStokDetay_Sarj">
+          <End Type="FirmaTakipDBModel.Sarj" Role="Sarj" Multiplicity="1" />
+          <End Type="FirmaTakipDBModel.HamStokDetay" Role="HamStokDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sarj">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HamStokDetay">
+              <PropertyRef Name="SarjId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IslenmisMalzemeDetay_HamStokDetay">
+          <End Type="FirmaTakipDBModel.HamStokDetay" Role="HamStokDetay" Multiplicity="1" />
+          <End Type="FirmaTakipDBModel.IslenmisMalzemeDetay" Role="IslenmisMalzemeDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HamStokDetay">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="IslenmisMalzemeDetay">
+              <PropertyRef Name="HamStokDetayId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HurdaAlani_IslenmisMalzemeDetay">
+          <End Type="FirmaTakipDBModel.IslenmisMalzemeDetay" Role="IslenmisMalzemeDetay" Multiplicity="1" />
+          <End Type="FirmaTakipDBModel.HurdaAlani" Role="HurdaAlani" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IslenmisMalzemeDetay">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HurdaAlani">
+              <PropertyRef Name="IslenmisMalzemeDetayId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SevkIrsaliyeDetay_HurdaAlani">
+          <End Type="FirmaTakipDBModel.HurdaAlani" Role="HurdaAlani" Multiplicity="0..1" />
+          <End Type="FirmaTakipDBModel.SevkIrsaliyeDetay" Role="SevkIrsaliyeDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HurdaAlani">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SevkIrsaliyeDetay">
+              <PropertyRef Name="HurdaAlaniId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IslenmisMalzemeDetay_IslenmisMalzeme">
+          <End Type="FirmaTakipDBModel.IslenmisMalzeme" Role="IslenmisMalzeme" Multiplicity="1" />
+          <End Type="FirmaTakipDBModel.IslenmisMalzemeDetay" Role="IslenmisMalzemeDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IslenmisMalzeme">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="IslenmisMalzemeDetay">
+              <PropertyRef Name="IslenmisMalzemeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SevkAlani_IslenmisMalzemeDetay">
+          <End Type="FirmaTakipDBModel.IslenmisMalzemeDetay" Role="IslenmisMalzemeDetay" Multiplicity="1" />
+          <End Type="FirmaTakipDBModel.SevkAlani" Role="SevkAlani" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IslenmisMalzemeDetay">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SevkAlani">
+              <PropertyRef Name="IslenmisMalzemeDetayId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SevkIrsaliye_Musteri">
+          <End Type="FirmaTakipDBModel.Musteri" Role="Musteri" Multiplicity="1" />
+          <End Type="FirmaTakipDBModel.SevkIrsaliye" Role="SevkIrsaliye" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Musteri">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SevkIrsaliye">
+              <PropertyRef Name="MusteriId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SevkIrsaliyeDetay_SevkAlani">
+          <End Type="FirmaTakipDBModel.SevkAlani" Role="SevkAlani" Multiplicity="0..1" />
+          <End Type="FirmaTakipDBModel.SevkIrsaliyeDetay" Role="SevkIrsaliyeDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SevkAlani">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SevkIrsaliyeDetay">
+              <PropertyRef Name="SevkAlaniId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SevkIrsaliyeDetay_SevkIrsaliye">
+          <End Type="FirmaTakipDBModel.SevkIrsaliye" Role="SevkIrsaliye" Multiplicity="1" />
+          <End Type="FirmaTakipDBModel.SevkIrsaliyeDetay" Role="SevkIrsaliyeDetay" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SevkIrsaliye">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SevkIrsaliyeDetay">
+              <PropertyRef Name="SevkIrsaliyeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FirmaTakipDBModelStoreContainer" CdmEntityContainer="FirmaTakipDB">
+          <FunctionImportMapping FunctionImportName="HamMalzemeEkle" FunctionName="FirmaTakipDBModel.Store.HamMalzemeEkle" />
+          <FunctionImportMapping FunctionImportName="HamMalzemeGuncelle" FunctionName="FirmaTakipDBModel.Store.HamMalzemeGuncelle" />
+          <FunctionImportMapping FunctionImportName="HamMalzemeSil" FunctionName="FirmaTakipDBModel.Store.HamMalzemeSil" />
+          <FunctionImportMapping FunctionImportName="HamStokDetayEkle" FunctionName="FirmaTakipDBModel.Store.HamStokDetayEkle" />
+          <FunctionImportMapping FunctionImportName="HamStokDetayGuncelle" FunctionName="FirmaTakipDBModel.Store.HamStokDetayGuncelle" />
+          <FunctionImportMapping FunctionImportName="HamStokDetaySevkMiktar" FunctionName="FirmaTakipDBModel.Store.HamStokDetaySevkMiktar" />
+          <FunctionImportMapping FunctionImportName="HamStokDetaySil" FunctionName="FirmaTakipDBModel.Store.HamStokDetaySil" />
+          <FunctionImportMapping FunctionImportName="HamStokEkle" FunctionName="FirmaTakipDBModel.Store.HamStokEkle" />
+          <FunctionImportMapping FunctionImportName="HamStokGuncelle" FunctionName="FirmaTakipDBModel.Store.HamStokGuncelle" />
+          <FunctionImportMapping FunctionImportName="HamStokSil" FunctionName="FirmaTakipDBModel.Store.HamStokSil" />
+          <FunctionImportMapping FunctionImportName="HurdaEkle" FunctionName="FirmaTakipDBModel.Store.HurdaEkle" />
+          <FunctionImportMapping FunctionImportName="HurdaSil" FunctionName="FirmaTakipDBModel.Store.HurdaSil" />
+          <FunctionImportMapping FunctionImportName="IslenmisMalzemeDetayEkle" FunctionName="FirmaTakipDBModel.Store.IslenmisMalzemeDetayEkle" />
+          <FunctionImportMapping FunctionImportName="IslenmisMalzemeDetayGuncelle" FunctionName="FirmaTakipDBModel.Store.IslenmisMalzemeDetayGuncelle" />
+          <FunctionImportMapping FunctionImportName="IslenmisMalzemeDetaySevkMiktar" FunctionName="FirmaTakipDBModel.Store.IslenmisMalzemeDetaySevkMiktar" />
+          <FunctionImportMapping FunctionImportName="IslenmisMalzemeDetaySil" FunctionName="FirmaTakipDBModel.Store.IslenmisMalzemeDetaySil" />
+          <FunctionImportMapping FunctionImportName="IslenmisMalzemeEkle" FunctionName="FirmaTakipDBModel.Store.IslenmisMalzemeEkle" />
+          <FunctionImportMapping FunctionImportName="IslenmisMalzemeGuncelle" FunctionName="FirmaTakipDBModel.Store.IslenmisMalzemeGuncelle" />
+          <FunctionImportMapping FunctionImportName="IslenmisMalzemeSil" FunctionName="FirmaTakipDBModel.Store.IslenmisMalzemeSil" />
+          <FunctionImportMapping FunctionImportName="SarjEkle" FunctionName="FirmaTakipDBModel.Store.SarjEkle" />
+          <FunctionImportMapping FunctionImportName="SarjGuncelle" FunctionName="FirmaTakipDBModel.Store.SarjGuncelle" />
+          <FunctionImportMapping FunctionImportName="SarjSil" FunctionName="FirmaTakipDBModel.Store.SarjSil" />
+          <FunctionImportMapping FunctionImportName="SevkAlaniEkle" FunctionName="FirmaTakipDBModel.Store.SevkAlaniEkle" />
+          <FunctionImportMapping FunctionImportName="SevkAlaniSil" FunctionName="FirmaTakipDBModel.Store.SevkAlaniSil" />
+          <EntitySetMapping Name="Birim">
+            <EntityTypeMapping TypeName="FirmaTakipDBModel.Birim">
+              <MappingFragment StoreEntitySet="Birim">
+                <ScalarProperty Name="Adi" ColumnName="Adi" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CookieSevkIrsaliyeDetay">
+            <EntityTypeMapping TypeName="FirmaTakipDBModel.CookieSevkIrsaliyeDetay">
+              <MappingFragment StoreEntitySet="CookieSevkIrsaliyeDetay">
+                <ScalarProperty Name="SevkAlaniId" ColumnName="SevkAlaniId" />
+                <ScalarProperty Name="Miktar" ColumnName="Miktar" />
+                <ScalarProperty Name="IsHurda" ColumnName="IsHurda" />
+                <ScalarProperty Name="HurdaAlaniId" ColumnName="HurdaAlaniId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HamMalzeme">
+            <EntityTypeMapping TypeName="FirmaTakipDBModel.HamMalzeme">
+              <MappingFragment StoreEntitySet="HamMalzeme">
+                <ScalarProperty Name="IsAktif" ColumnName="IsAktif" />
+                <ScalarProperty Name="BirimId" ColumnName="BirimId" />
+                <ScalarProperty Name="No" ColumnName="No" />
+                <ScalarProperty Name="Adi" ColumnName="Adi" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HamStok">
+            <EntityTypeMapping TypeName="FirmaTakipDBModel.HamStok">
+              <MappingFragment StoreEntitySet="HamStok">
+                <ScalarProperty Name="IsAktif" ColumnName="IsAktif" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="IrsaliyeNo" ColumnName="IrsaliyeNo" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HamStokDetay">
+            <EntityTypeMapping TypeName="FirmaTakipDBModel.HamStokDetay">
+              <MappingFragment StoreEntitySet="HamStokDetay">
+                <ScalarProperty Name="SevkMiktar" ColumnName="SevkMiktar" />
+                <ScalarProperty Name="Miktar" ColumnName="Miktar" />
+                <ScalarProperty Name="HamStokId" ColumnName="HamStokId" />
+                <ScalarProperty Name="SarjId" ColumnName="SarjId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HurdaAlani">
+            <EntityTypeMapping TypeName="FirmaTakipDBModel.HurdaAlani">
+              <MappingFragment StoreEntitySet="HurdaAlani">
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="SevkMiktar" ColumnName="SevkMiktar" />
+                <ScalarProperty Name="Miktar" ColumnName="Miktar" />
+                <ScalarProperty Name="IslenmisMalzemeDetayId" ColumnName="IslenmisMalzemeDetayId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IslenmisMalzeme">
+            <EntityTypeMapping TypeName="FirmaTakipDBModel.IslenmisMalzeme">
+              <MappingFragment StoreEntitySet="IslenmisMalzeme">
+                <ScalarProperty Name="KatSayi" ColumnName="KatSayi" />
+                <ScalarProperty Name="IsAktif" ColumnName="IsAktif" />
+                <ScalarProperty Name="BirimId" ColumnName="BirimId" />
+                <ScalarProperty Name="HamMalzemeId" ColumnName="HamMalzemeId" />
+                <ScalarProperty Name="No" ColumnName="No" />
+                <ScalarProperty Name="Adi" ColumnName="Adi" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IslenmisMalzemeDetay">
+            <EntityTypeMapping TypeName="FirmaTakipDBModel.IslenmisMalzemeDetay">
+              <MappingFragment StoreEntitySet="IslenmisMalzemeDetay">
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="SevkMiktar" ColumnName="SevkMiktar" />
+                <ScalarProperty Name="Miktar" ColumnName="Miktar" />
+                <ScalarProperty Name="HamStokDetayId" ColumnName="HamStokDetayId" />
+                <ScalarProperty Name="IslenmisMalzemeId" ColumnName="IslenmisMalzemeId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Musteri">
+            <EntityTypeMapping TypeName="FirmaTakipDBModel.Musteri">
+              <MappingFragment StoreEntitySet="Musteri">
+                <ScalarProperty Name="IsAktif" ColumnName="IsAktif" />
+                <ScalarProperty Name="Adi" ColumnName="Adi" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sarj">
+            <EntityTypeMapping TypeName="FirmaTakipDBModel.Sarj">
+              <MappingFragment StoreEntitySet="Sarj">
+                <ScalarProperty Name="HamMalzemeId" ColumnName="HamMalzemeId" />
+                <ScalarProperty Name="No" ColumnName="No" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SevkAlani">
+            <EntityTypeMapping TypeName="FirmaTakipDBModel.SevkAlani">
+              <MappingFragment StoreEntitySet="SevkAlani">
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="SevkEdildi" ColumnName="SevkEdildi" />
+                <ScalarProperty Name="Miktar" ColumnName="Miktar" />
+                <ScalarProperty Name="KasaNo" ColumnName="KasaNo" />
+                <ScalarProperty Name="IslenmisMalzemeDetayId" ColumnName="IslenmisMalzemeDetayId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SevkIrsaliye">
+            <EntityTypeMapping TypeName="FirmaTakipDBModel.SevkIrsaliye">
+              <MappingFragment StoreEntitySet="SevkIrsaliye">
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="IrsaliyeNo" ColumnName="IrsaliyeNo" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="MusteriId" ColumnName="MusteriId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SevkIrsaliyeDetay">
+            <EntityTypeMapping TypeName="FirmaTakipDBModel.SevkIrsaliyeDetay">
+              <MappingFragment StoreEntitySet="SevkIrsaliyeDetay">
+                <ScalarProperty Name="HurdaAlaniId" ColumnName="HurdaAlaniId" />
+                <ScalarProperty Name="SevkAlaniId" ColumnName="SevkAlaniId" />
+                <ScalarProperty Name="Miktar" ColumnName="Miktar" />
+                <ScalarProperty Name="IsHurda" ColumnName="IsHurda" />
+                <ScalarProperty Name="SevkIrsaliyeId" ColumnName="SevkIrsaliyeId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="FirmaTakipDBModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1" ZoomLevel="64">
+        <EntityTypeShape EntityType="FirmaTakipDBModel.Birim" Width="1.5" PointX="0.75" PointY="7" Height="1.7879850260416665" />
+        <EntityTypeShape EntityType="FirmaTakipDBModel.CookieSevkIrsaliyeDetay" Width="1.5" PointX="14.25" PointY="8.5" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="FirmaTakipDBModel.HamMalzeme" Width="1.5" PointX="3" PointY="6.625" Height="2.5571907552083246" />
+        <EntityTypeShape EntityType="FirmaTakipDBModel.HamStok" Width="1.5" PointX="5.25" PointY="13.5" Height="2.1725878906249818" />
+        <EntityTypeShape EntityType="FirmaTakipDBModel.HamStokDetay" Width="1.5" PointX="7.5" PointY="10.375" Height="2.5571907552083246" />
+        <EntityTypeShape EntityType="FirmaTakipDBModel.HurdaAlani" Width="1.5" PointX="12" PointY="6.375" Height="2.7494921874999818" />
+        <EntityTypeShape EntityType="FirmaTakipDBModel.IslenmisMalzeme" Width="1.5" PointX="5.25" PointY="6.375" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="FirmaTakipDBModel.IslenmisMalzemeDetay" Width="1.5" PointX="9.75" PointY="8.125" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="FirmaTakipDBModel.Musteri" Width="1.5" PointX="12.75" PointY="2.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="FirmaTakipDBModel.Sarj" Width="1.5" PointX="5.25" PointY="10.625" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="FirmaTakipDBModel.SevkAlani" Width="1.5" PointX="12" PointY="9.875" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="FirmaTakipDBModel.SevkIrsaliye" Width="1.5" PointX="15" PointY="2.5" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="FirmaTakipDBModel.SevkIrsaliyeDetay" Width="1.5" PointX="17.25" PointY="8.25" Height="2.7494921874999818" />
+        <EntityTypeShape EntityType="FirmaTakipDBModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9802864583333246" />
+        <AssociationConnector Association="FirmaTakipDBModel.FK_HamMalzeme_Birim" >
+          <ConnectorPoint PointX="2.25" PointY="7.8939925130208337" />
+          <ConnectorPoint PointX="3" PointY="7.8939925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="FirmaTakipDBModel.FK_IslenmisMalzeme_Birim" >
+          <ConnectorPoint PointX="1.5" PointY="8.7879850260416674" />
+          <ConnectorPoint PointX="1.5" PointY="9.280742187499996" />
+          <ConnectorPoint PointX="3.6666666666666665" PointY="9.280742187499996" />
+          <ConnectorPoint PointX="3.8333333333333335" PointY="9.280742187499996" />
+          <ConnectorPoint PointX="5.25" PointY="9.280742187499996" />
+        </AssociationConnector>
+        <AssociationConnector Association="FirmaTakipDBModel.FK_CookieSevkIrsaliyeDetay_HurdaAlani1" >
+          <ConnectorPoint PointX="13.5" PointY="8.8122460937499909" />
+          <ConnectorPoint PointX="14.25" PointY="8.8122460937499909" />
+        </AssociationConnector>
+        <AssociationConnector Association="FirmaTakipDBModel.FK_CookieSevkIrsaliyeDetay_SevkAlani1" >
+          <ConnectorPoint PointX="13.5" PointY="10.369944661458334" />
+          <ConnectorPoint PointX="14.25" PointY="10.369944661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="FirmaTakipDBModel.FK_IslenmisMalzeme_HamMalzeme" >
+          <ConnectorPoint PointX="4.5" PointY="7.9035953776041623" />
+          <ConnectorPoint PointX="5.25" PointY="7.9035953776041623" />
+        </AssociationConnector>
+        <AssociationConnector Association="FirmaTakipDBModel.FK_Sarj_HamMalzeme" >
+          <ConnectorPoint PointX="3.75" PointY="9.1821907552083246" />
+          <ConnectorPoint PointX="3.75" PointY="11.615143229166662" />
+          <ConnectorPoint PointX="5.25" PointY="11.615143229166662" />
+        </AssociationConnector>
+        <AssociationConnector Association="FirmaTakipDBModel.FK_HamStokDetay_HamStok" >
+          <ConnectorPoint PointX="6.75" PointY="14.586293945312491" />
+          <ConnectorPoint PointX="8.25" PointY="14.586293945312491" />
+          <ConnectorPoint PointX="8.25" PointY="12.932190755208325" />
+        </AssociationConnector>
+        <AssociationConnector Association="FirmaTakipDBModel.FK_HamStokDetay_Sarj" >
+          <ConnectorPoint PointX="6.75" PointY="11.615143229166662" />
+          <ConnectorPoint PointX="7.5" PointY="11.615143229166662" />
+        </AssociationConnector>
+        <AssociationConnector Association="FirmaTakipDBModel.FK_IslenmisMalzemeDetay_HamStokDetay" >
+          <ConnectorPoint PointX="9" PointY="10.720896809895834" />
+          <ConnectorPoint PointX="9.75" PointY="10.720896809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="FirmaTakipDBModel.FK_HurdaAlani_IslenmisMalzemeDetay" >
+          <ConnectorPoint PointX="11.25" PointY="8.6247460937499909" />
+          <ConnectorPoint PointX="12" PointY="8.6247460937499909" />
+        </AssociationConnector>
+        <AssociationConnector Association="FirmaTakipDBModel.FK_SevkIrsaliyeDetay_HurdaAlani" >
+          <ConnectorPoint PointX="13.5" PointY="8.34375" />
+          <ConnectorPoint PointX="17.25" PointY="8.34375" />
+        </AssociationConnector>
+        <AssociationConnector Association="FirmaTakipDBModel.FK_IslenmisMalzemeDetay_IslenmisMalzeme" >
+          <ConnectorPoint PointX="6.75" PointY="8.7208968098958337" />
+          <ConnectorPoint PointX="9.75" PointY="8.7208968098958337" />
+        </AssociationConnector>
+        <AssociationConnector Association="FirmaTakipDBModel.FK_SevkAlani_IslenmisMalzemeDetay" >
+          <ConnectorPoint PointX="11.25" PointY="10.470896809895834" />
+          <ConnectorPoint PointX="12" PointY="10.470896809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="FirmaTakipDBModel.FK_SevkIrsaliye_Musteri" >
+          <ConnectorPoint PointX="14.25" PointY="3.6439925130208337" />
+          <ConnectorPoint PointX="15" PointY="3.6439925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="FirmaTakipDBModel.FK_SevkIrsaliyeDetay_SevkAlani" >
+          <ConnectorPoint PointX="13.5" PointY="10.963440755208325" />
+          <ConnectorPoint PointX="17.25" PointY="10.963440755208325" />
+        </AssociationConnector>
+        <AssociationConnector Association="FirmaTakipDBModel.FK_SevkIrsaliyeDetay_SevkIrsaliye" >
+          <ConnectorPoint PointX="16.15625" PointY="4.8648893229166674" />
+          <ConnectorPoint PointX="16.15625" PointY="8.3124975000000063" />
+          <ConnectorPoint PointX="17.25" PointY="8.3124975000000063" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

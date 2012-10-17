@@ -1,0 +1,34 @@
+﻿<XtraSerializer version="1.0" application="Appearances">
+  <property name="HeaderPanel" iskey="true" value="HeaderPanel">
+    <property name="Options" isnull="true" iskey="true">
+      <property name="UseForeColor">true</property>
+      <property name="UseFont">true</property>
+    </property>
+    <property name="ForeColor">Maroon</property>
+    <property name="Font">Tahoma, 13pt, style=Bold</property>
+  </property>
+  <property name="FocusedRow" iskey="true" value="FocusedRow">
+    <property name="Options" isnull="true" iskey="true">
+      <property name="UseForeColor">true</property>
+      <property name="UseFont">true</property>
+    </property>
+    <property name="ForeColor">Maroon</property>
+    <property name="Font">Tahoma, 12pt</property>
+  </property>
+  <property name="Row" iskey="true" value="Row">
+    <property name="Options" isnull="true" iskey="true">
+      <property name="UseForeColor">true</property>
+      <property name="UseFont">true</property>
+    </property>
+    <property name="ForeColor">Black</property>
+    <property name="Font">Tahoma, 12pt</property>
+  </property>
+  <property name="TopNewRow" iskey="true" value="TopNewRow">
+    <property name="Options" isnull="true" iskey="true">
+      <property name="UseForeColor">true</property>
+      <property name="UseFont">true</property>
+    </property>
+    <property name="ForeColor">Maroon</property>
+    <property name="Font">Tahoma, 12pt</property>
+  </property>
+</XtraSerializer>
