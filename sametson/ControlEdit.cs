@@ -13,7 +13,7 @@ namespace sametson
     public class ControlEdit
     {
         /// <summary>
-        /// LayoutControl içindeki textbox ve Memoedit lerin içeriğini temizler
+        /// LayoutControl içindeki textbox ve Memoedit lerin içeriğini temizler 
         /// </summary>
         /// <param name="layoutControl">Temizlenecek layoutControl</param>
         public void LayoutBilgiTemizle(LayoutControl layoutControl)
